@@ -1,7 +1,7 @@
 # my global config
 global:
-  scrape_interval:     120s # By default, scrape targets every 15 seconds.
-  evaluation_interval: 120s # By default, scrape targets every 15 seconds.
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
   # scrape_timeout is set to the global default (10s).
 
   # Attach these labels to any time series or alerts when communicating with
@@ -22,13 +22,14 @@ scrape_configs:
   - job_name: 'prometheus'
 
     # Override the global default and scrape targets from this job every 5 seconds.
-    scrape_interval: 120s
+    scrape_interval: 5s
 
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
 
     static_configs:
-         - targets: ['localhost:9090','cadvisor:8080','node-exporter:9100', 'nginx-exporter:9113']
+     - targets: ['localhost:9090','cadvisor:8080','node-exporter:9100', 'nginx-exporter:9113']
+
 
   ###### Targets my Hello World Application ######
   - job_name: 'spring-actuator'
@@ -36,3 +37,4 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
     - targets: ['web:8080'] 
+

@@ -1,0 +1,17 @@
+{
+	"ulid": "01FFTSEB18TXKM1CNXH3FHYNCM",
+	"minTime": 1631897981074,
+	"maxTime": 1631901600000,
+	"stats": {
+		"numSamples": 2674,
+		"numSeries": 2218,
+		"numChunks": 2218
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01FFTSEB18TXKM1CNXH3FHYNCM"
+		]
+	},
+	"version": 1
+}
